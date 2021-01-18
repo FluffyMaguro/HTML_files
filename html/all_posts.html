@@ -449,6 +449,7 @@ function LoadTheArchive(TotalFeed) {
     if ("entry" in TotalFeed.feed) {
         let PostEntries = TotalFeed.feed.entry.length;
         let fallback = document.getElementById('fallbackdiv');
+        console.log('received ' + PostEntries + ' post entries');
 
         for (let PostNum = 0; PostNum < PostEntries; PostNum++) { //go through posts
             let ThisPost = TotalFeed.feed.entry[PostNum];
@@ -529,6 +530,7 @@ function get_shown_posts() {
 }
 
 var ELEMENTS = get_shown_posts();
+console.log('starting...');
 </script>
 <script src="https://www.maguro.one/feeds/posts/default?max-results=6&amp;alt=json-in-script&amp;callback=LoadTheArchive">
 </script>
