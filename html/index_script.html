@@ -77,7 +77,8 @@ function LoadTheArchive(TotalFeed) {
             if (!found) {
                 console.log(title + ' NOT in elements ' + url);
                 img = img.replace('s72-c', 's675');
-                fallback.innerHTML = fallback.innerHTML + '<a class="itemlink" style="display: block" href="' + url + '"><p class="postdate">' + date + '</p><div style="background-image: url(\'' + img + '\')"><p>'  + '</p></div>' + '<div class="desc">' + extract + '</p>' + '</a>';
+                console.log('Adding: ' + date + ' | ' + img + ' | ' + title + ' | ' + extract);
+                fallback.innerHTML = fallback.innerHTML + '<a class="itemlink fallback" style="display: block" href="' + url + '"><p class="postdate">' + date + '</p><div style="background-image: url(\'' + img + '\')"><p class="btitle">' + title + '</p></div>' + '<div class="desc">' + extract + '</div>' + '</a>';
             }
         }
 
@@ -91,7 +92,7 @@ function LoadTheArchive(TotalFeed) {
         for (let i = 0; i < items.length; i++) {
             let desc = items[i].getElementsByClassName('desc');
             let div = items[i].getElementsByTagName('div')[0]
-            if (desc.length == 0) {
+            if (desc.length == 0 && !items[i].classList.contains("fallback")) {
                 items[i].classList.add('small');
                 items[i].style.display = 'inline-block';
             }
