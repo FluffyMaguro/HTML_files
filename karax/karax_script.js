@@ -1,7 +1,7 @@
 // Loads Karax webpage and fills the page
 function init() {
     document.body.innerHTML = "<div></div>";
-    document.body.display.background = "black";
+    document.body.style.background = "black";
 
     let request = new XMLHttpRequest();
     request.open('GET', 'https://raw.githubusercontent.com/FluffyMaguro/HTML_files/main/karax/karax.html', true);
