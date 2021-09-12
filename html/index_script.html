@@ -111,6 +111,7 @@ function get_shown_posts() {
 }
 
 function index_page_init(){
+    document.getElementById("HTML1").style.display = 'none';
     // LOAD HTML
     let request = new XMLHttpRequest();
     request.open('GET', 'https://raw.githubusercontent.com/FluffyMaguro/HTML_files/main/html/all_posts.html', true);
@@ -123,8 +124,10 @@ function index_page_init(){
         HTML_loaded = true;
         console.log('HTML loaded..');
         checkLoaded();
+        document.getElementById("HTML1").style.display = 'block';
         }
-    }
+    };
+    
 }
 
 function SaveArchive(response) {
