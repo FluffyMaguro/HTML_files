@@ -1,532 +1,633 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-    <title>Home</title>
-    <style>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <title>Home</title>
+  <style>
     .hfeed.blog-posts {
-        margin-top: 0px
+      margin-top: 0px
     }
 
     #fallbackdiv {
-        margin-top: -26px
+      margin-top: -26px
     }
 
     .itemlink {
-        display: none;
-        margin-bottom: 60px;
-        width: 100%;
-        text-decoration: none
+      display: none;
+      margin-bottom: 60px;
+      width: 100%;
+      text-decoration: none
     }
 
     .itemlink:hover {
-        text-decoration: none;
-        color: #ccc;
+      text-decoration: none;
+      color: #ccc;
     }
 
     .itemlink div:not(.desc) {
-        width: 100%;
-        height: 250px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        border: 1px solid #444;
-        border-radius: 3px;
+      width: 100%;
+      height: 250px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      border: 1px solid #444;
+      border-radius: 3px;
     }
 
     .itemlink div:hover:not(.desc) {
-        filter: brightness(120%) contrast(95%);
-        border: 1px solid #aaa;
+      filter: brightness(120%) contrast(95%);
+      border: 1px solid #aaa;
     }
 
     .btitle {
-        color: white;
-        text-shadow: 0 0 4px black, 0 0 20px black;
-        font-weight: 900;
-        font-family: arial;
-        line-height: 1em;
-        font-size: 50px;
-        margin: auto;
-        display: block;
+      color: white;
+      text-shadow: 0 0 4px black, 0 0 20px black;
+      font-weight: 900;
+      font-family: arial;
+      line-height: 1em;
+      font-size: 50px;
+      margin: auto;
+      display: block;
     }
 
     .bsuptitle {
-        font-size: 40px;
+      font-size: 40px;
     }
-      
+
     .small .bsuptitle {
-        font-size: 24px;
+      font-size: 24px;
     }
 
     .desc {
-        margin-top: 6px;
+      margin-top: 6px;
     }
 
     .postdate {
-        font-style: italic;
-        color: #999;
-        margin-top: 0px;
-        margin-bottom: 2px;
+      font-style: italic;
+      color: #999;
+      margin-top: 0px;
+      margin-bottom: 2px;
     }
 
     .itemlink.small {
-        margin: 7px 7px 0px 7px;
+      margin: 7px 7px 0px 7px;
     }
 
     /* Make other items small for bigger screens */
     @media screen and (min-width: 800px) {
-        .itemlink.small {
-            width: 48.5%;
-            margin: 3px 3px 3px 3px;
-        }
+      .itemlink.small {
+        width: 48.5%;
+        margin: 3px 3px 3px 3px;
+      }
 
-        .itemlink.small div:not(.desc) {
-            height: 150px;
-        }
+      .itemlink.small div:not(.desc) {
+        height: 150px;
+      }
 
-        .itemlink.small .btitle {
-            font-size: 30px;
-            margin-top: 0px;
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+      .itemlink.small .btitle {
+        font-size: 30px;
+        margin-top: 0px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
 
     }
-    </style>
-  </head>
-  <body>
-    <div id="fallbackdiv"></div>
-      <a class="itemlink" href="https://www.maguro.one/2021/11/mixed-strategies.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-anrfANeYZrw/YZ2MZ_i2MwI/AAAAAAAAK6w/gcEKB-GeGyUC7aPW3Mx_LyEIc4x7icXqACLcBGAsYHQ/s1200/banner.jpg')">
-       <p class="btitle">Mixed strategies<br>
-      </div>
-    </a>
-    <a class="itemlink" href="https://www.maguro.one/2021/10/TR11-co-op.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-k9cCqWwtoTE/YW1zDQ10YtI/AAAAAAAAK20/-ZoGt0fHgRIqPkIcrVOxWFZWrWajS5clgCLcBGAsYHQ/s1200/banner.jpg')">
-       <p class="btitle">Transmission 11<br>
-          <span class="bsuptitle">A plan for co-op</span></p>
-      </div>
-    </a>
-     <a class="itemlink" href="https://www.maguro.one/2021/09/TR10-social-features.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-4vAd5FK56s0/YT9W5xjrgjI/AAAAAAAAK0M/0tIXe-npKKAp-n1f6DrW5fW1cxIW7CojwCLcBGAsYHQ/s1200/Banner%2B-%2BSocial.jpg')">
-       <p class="btitle">Transmission 10<br>
-          <span class="bsuptitle">Social features</span></p>
-      </div>
-    </a>
-    <a class="itemlink" href="https://www.maguro.one/2021/08/faction-image-design.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-vDD__lXVULM/YR0_zd3k9kI/AAAAAAAAKxo/UMzNPtpNKT8vkJQJeGO7oGDSa29UHcATwCLcBGAsYHQ/s1200/Banner.jpg')">
-        <p class="btitle">Faction image &amp; design<br>
-          <span class="bsuptitle"></span></p>
-      </div>
-    </a>
-    <a class="itemlink" href="https://www.maguro.one/2021/06/inhumane.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/--2QISC530NI/YM4fO-YcpsI/AAAAAAAAKo4/4rdK08NCmms7f_UDUkveuh-SH4zuuo_GACLcBGAsYHQ/s1200/banner.jpg')">
-        <p class="btitle">New custom mutator<br>
-          <span class="bsuptitle">Inhumane</span></p>
-      </div>
-    </a>
-    <a class="itemlink" href="https://www.maguro.one/2021/06/TR09-gameplay-variety.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-sF7hJOeZH1E/YJGpcZ2sssI/AAAAAAAAKiU/8nU4_c05Hfk5v-FUgKEEJp9oJmyTJaBEwCLcBGAsYHQ/s1200/banner2.jpg')">
-        <p class="btitle">Transmission 09<br>
-          <span class="bsuptitle">Gameplay variety</span></p>
-      </div>
-    </a>
-    <a class="itemlink" href="https://www.maguro.one/2021/05/TR08-attention-and-macro.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-mMWhGWiEkHk/YJB1yrAulHI/AAAAAAAAKho/VD7u_KSyxkksXKZuXgHFnR8pS9Q9y6RagCLcBGAsYHQ/s1200/banner.jpg')">
-        <p class="btitle">Transmission 08<br>
-          <span class="bsuptitle">Attention and macro</span></p>
-      </div>
-    </a>
-    <a class="itemlink" href="https://www.maguro.one/2021/04/TR07-teamgames.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-xc_T8yHHoT0/YHWFO6bSHfI/AAAAAAAAKec/5B5JjRVH578029QsZ_-wAcxNemNP9mR4ACLcBGAsYHQ/s1200/Banner.jpg')">
-        <p class="btitle">Transmission 07<br>
-          <span class="bsuptitle">Team games in RTS</span></p>
-      </div>
-    </a>
-    <a class="itemlink" href="https://www.maguro.one/2021/03/transmission06.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-MZMjBFT6500/YACqFFYc7SI/AAAAAAAAKGY/MPlgB0FTsfABVF7-oD373P9Vv-dpyDlAACLcBGAsYHQ/s675/FG.jpg')">
-        <p class="btitle">Transmission 06<br>
-          <span class="bsuptitle">API, replays, post-game screens</span></p>
-      </div>
-    </a>
-     <a class="itemlink" href="https://www.maguro.one/2021/03/transmission-05.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-MZMjBFT6500/YACqFFYc7SI/AAAAAAAAKGY/MPlgB0FTsfABVF7-oD373P9Vv-dpyDlAACLcBGAsYHQ/s675/FG.jpg')">
-        <p class="btitle">Transmission 05<br>
-          <span class="bsuptitle">Events &amp; progression</span></p>
-      </div>
-    </a>
-     <a class="itemlink" href="https://www.maguro.one/2021/02/transmission04.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-MZMjBFT6500/YACqFFYc7SI/AAAAAAAAKGY/MPlgB0FTsfABVF7-oD373P9Vv-dpyDlAACLcBGAsYHQ/s675/FG.jpg')">
-        <p class="btitle">Transmission 04<br>
-          <span class="bsuptitle">Improving Co-op</span></p>
-      </div>
-    </a>
-    <a class="itemlink" href="https://www.maguro.one/2020/12/transmission03.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-MZMjBFT6500/YACqFFYc7SI/AAAAAAAAKGY/MPlgB0FTsfABVF7-oD373P9Vv-dpyDlAACLcBGAsYHQ/s675/FG.jpg')">
-        <p class="btitle">Transmission 03<br>
-          <span class="bsuptitle">Divided playerbase, variety mode, victory
-            conditions</span></p>
-      </div>
-    </a><a class="itemlink" href="https://www.maguro.one/2021/01/supply-limits.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-cJyyVgqaips/YArm53aVc1I/AAAAAAAAKMg/JadMRk9CP143gjowEJ9WpO1ChxPgyB-4wCLcBGAsYHQ/s0/banner.jpg')">
-        <p class="btitle">Supply &amp; Limits</p>
-      </div>
-    </a><a class="itemlink" href="https://www.maguro.one/2021/01/cnc3.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-zZyt0nlZnLw/YAdMjNK1o_I/AAAAAAAAKL4/IpvQCXPSZZwEID2xvqzsJPw9R6tCJN2UgCLcBGAsYHQ/s675/cnc3.jpg')">
-        <p class="btitle">Command and Conquer 3</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2020/12/mastery-exploit.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-hiJ214wxKBY/YACvtFPB9RI/AAAAAAAAKKw/O8cfGKJcTA4aIaQvdXhFFwEZWWxlw5tzACLcBGAsYHQ/s675/mastery_explot.jpg')">
-        <p class="btitle">Mastery Exploit</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2020/11/transmission02.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-MZMjBFT6500/YACqFFYc7SI/AAAAAAAAKGY/MPlgB0FTsfABVF7-oD373P9Vv-dpyDlAACLcBGAsYHQ/s675/FG.jpg')">
-        <p class="btitle">Transmission 02<br>
-          <span class="bsuptitle">Player onboarding</span></p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2020/11/transmission01.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-MZMjBFT6500/YACqFFYc7SI/AAAAAAAAKGY/MPlgB0FTsfABVF7-oD373P9Vv-dpyDlAACLcBGAsYHQ/s675/FG.jpg')">
-        <p class="btitle">Transmission 01<br>
-          <span class="bsuptitle">Setting, Scale, Socialization</span></p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2020/10/unit-design.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-i5BncaDNdUI/YACqeEM-P2I/AAAAAAAAKJ0/n96HGd7us40n9hk5ic8e-42g7AxEmFGKACLcBGAsYHQ/s675/unit_design.jpg')">
-        <p class="btitle">Look at Unit Design</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2020/10/closer-look-at-upkeep.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-G_87o9yOiN0/YACqfWhGmMI/AAAAAAAAKJ8/9myG6OuwbSIM_vRPq8tx4wjul1NzEKNLgCLcBGAsYHQ/s675/upkeep.jpg')">
-        <p class="btitle">Upkeep</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2020/04/hsc-in-numbers.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-6-Osb9fBybA/YACqSewPcoI/AAAAAAAAKIA/_6LuXkz0_zUtYxgJOcdqAiJLTdRKbVZ-ACLcBGAsYHQ/s675/hsc_in_numbers.jpg')">
-        <p class="btitle">HSC in numbers</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2020/04/bug-hunt-10.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-81pDiIvV1a4/YACqIpZF-6I/AAAAAAAAKG0/Gb4YqYsqWoozMeTl4POyLnbuOAhKbSImwCLcBGAsYHQ/s675/bh10.jpg')">
-        <p class="btitle">Bug Hunt X</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2020/03/iem-in-numbers.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-46T1t01H68c/YACqS_7JYmI/AAAAAAAAKIE/0oUth8WKrDcPaOAZGfdR3kYJFaGtFs2QgCLcBGAsYHQ/s675/iem_in_numbers.jpg')">
-        <p class="btitle">IEM in numbers</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2020/02/tournament-analysis.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-2z-qjpg2J5A/YACqd9DsFgI/AAAAAAAAKJk/NOS0oC4Iw6YcJJ69cH-2FFJ-EyIstMcYQCLcBGAsYHQ/s675/tournament_analysis.jpg')">
-        <p class="btitle">Tournament Analysis</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2020/01/survival-mode.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-jRcNX2_Sby4/YACqc_MdxyI/AAAAAAAAKJU/R_0nYibsHbQkK8y1y9HgjOr2qZNhx2IEACLcBGAsYHQ/s675/survival_mode.jpg')">
-        <p class="btitle">Survival Mode</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2020/01/replay-analysis-2.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-anitN4kA_Q4/YACqZXPoYoI/AAAAAAAAKI4/_GPuVfPyBhw12kLvDCqt7R4paHkasoVrgCLcBGAsYHQ/s675/replay_analysis2.jpg.jpg')">
-        <p class="btitle">Replay Analysis II</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2020/01/fluffy-chatbot.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-v8xynJntToU/YACqQwdkuEI/AAAAAAAAKH0/OP-FA8hQl_YSAVE7RYJ9ICZ95VzKrre4gCLcBGAsYHQ/s675/fluffy_chatbot.jpg')">
-        <p class="btitle">Fluffy Chat Bot</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/12/healer-ai.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-Av8cce77ITo/YACqR5FrpWI/AAAAAAAAKH8/GIGQlI5cL5kPcBntTmnbH-6SbDDpnqpWgCLcBGAsYHQ/s675/healer_ai.jpg')">
-        <p class="btitle">Healer AI</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/12/brutal-plus-revisited.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-cFD3dSXkPGk/YACqHv48ibI/AAAAAAAAKGs/WdyiAG7OpLUqk2cl9FMT5o0Z9IG7LRSLgCLcBGAsYHQ/s675/b_plus_revisited.jpg')">
-        <p class="btitle">Brutal+ Revisited</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/12/brutal-analysis.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-wNNIJMOroFI/YACqHIGgXRI/AAAAAAAAKGo/PHNH9svf4FMAzpnOEAATV-KAc8bG3GGRwCLcBGAsYHQ/s675/b_plus_analysis.jpg')">
-        <p class="btitle">Brutal+ Analysis</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/11/replay-analysis.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-UCGtMjACHPU/YACqY4CHSSI/AAAAAAAAKI0/DvGjEpuiiTMiztPaAO0sHo0jXh4vGawiACLcBGAsYHQ/s675/replay_analysis.jpg')">
-        <p class="btitle">Replay Analysis<br>
-          with Python</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/11/bug-hunt-9.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-Z7Zs9xLue94/YACqMgKc2cI/AAAAAAAAKHU/lzYJ9q6p_NQ0IS7-p9CgdsGdEKB0TjcrwCLcBGAsYHQ/s675/bh9.jpg')">
-        <p class="btitle">Bug Hunt IX</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/10/shapeshifters.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-0zGAJ4pS7iw/YACqFiOLvQI/AAAAAAAAKGc/lDYtS4cgcMgBBwDJBX21jTSpXkH1VXeMACLcBGAsYHQ/s675/Shapeshifters.jpg')">
-        <p class="btitle">Shapeshifters</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/10/replay-interface.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-D7tmO3uhE8A/YACqZ7WUIpI/AAAAAAAAKI8/dt2WHO-3o18nsD-FdpeqzMaRxMHrjejzACLcBGAsYHQ/s675/replay_interface.jpg')">
-        <p class="btitle">Replay interface</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/10/gears-5.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-J7IUbXpXOiM/YACqFM4-1-I/AAAAAAAAKGQ/HhhkJwpRzW8oVf3N4yud1nbUWXCxlPzgQCLcBGAsYHQ/s675/Gears5.jpg')">
-        <p class="btitle">Gears 5</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/10/dram-performance-testing-in-starcraft-2.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-MDJgTz6iDu0/YACqFLCKMjI/AAAAAAAAKGU/ELlfCmtGIyATzyfhiQ14by_PXHk0j5KowCLcBGAsYHQ/s675/DRAM.jpg')">
-        <p class="btitle">DRAM performance<br>
-          testing in StarCraft II</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/10/bug-hunt-8.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-uou0z-QVS50/YACqMfx9jjI/AAAAAAAAKHQ/sNfmh8KQYcQTCHrMX7d8VnEJPOanaO-ugCLcBGAsYHQ/s675/bh8.jpg')">
-        <p class="btitle">Bug Hunt VIII</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/09/the-usual-suspects.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-goVVy8vFzvE/YACqaQJyB_I/AAAAAAAAKJA/A96u8AkyonwWxGnaAP0xhr1T0RkvZztJQCLcBGAsYHQ/s675/rise_of_fenix.jpg')">
-        <p class="btitle">The Usual Suspects</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/09/performance-testing.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-UzCz6OjVyS4/YACqbTS-2SI/AAAAAAAAKJI/kbwkq6wS31IRNPXBwtZrX4RZJbvd1Gu0gCLcBGAsYHQ/s675/sc2_benchmarking.jpg')">
-        <p class="btitle">StarCraft II<br>
-          performance testing</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/09/bug-hunt-7.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-Qg0_zM9rN_U/YACqL8ac_rI/AAAAAAAAKHM/S_vYM63efF8xC9Rg9nf4CyIAFcQZTsYfACLcBGAsYHQ/s675/bh7.jpg')">
-        <p class="btitle">Bug Hunt VII</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/06/uiux-tweaks.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-xGvvo04pYaE/YACqeIoQrcI/AAAAAAAAKJw/ANLR0mB2czk8DN75YuCQ29WKHdQJocsDACLcBGAsYHQ/s675/uiux_tweaks.jpg')">
-        <p class="btitle">UI/UX Tweaks</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/06/mutator-safety-zones.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-8pl3IhZnc0E/YACqa3l3xBI/AAAAAAAAKJE/ftuBm_3hQQcI3An-JgYT7oFbKp5_uNSngCLcBGAsYHQ/s675/safety_zones.jpg')">
-        <p class="btitle">Mutator Safety Zones</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/06/bug-hunt-6.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-dp8Qts95gY4/YACqLMaNOZI/AAAAAAAAKHI/tCpEK4EZwZQh_edKBGubRpu3pErU7FK7wCLcBGAsYHQ/s675/bh6.jpg')">
-        <p class="btitle">Bug Hunt VI</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/06/bug-hunt-5.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-wCRW1ZRrIpc/YACqKiywRRI/AAAAAAAAKHE/O2KP6W1pHcgzwaWolHRSwLY14fhKk6UgQCLcBGAsYHQ/s675/bh5.jpg')">
-        <p class="btitle">Bug Hunt V</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/04/challenge-mode.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-vs6tyI9bdY4/YACqNPvaQlI/AAAAAAAAKHY/SPYxRBbTrsQV00GwoZ92o2JbxhjzIDUCACLcBGAsYHQ/s675/challenge_mode.jpg')">
-        <p class="btitle">Challenge mode</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/04/bug-hunt-4.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-DZh_Yzm--bA/YACqKDQUG-I/AAAAAAAAKHA/VWvaEGVjNtgFprRWdq165N0pA6X9uPAxwCLcBGAsYHQ/s675/bh4.jpg')">
-        <p class="btitle">Bug Hunt IV</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/03/recent-games.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-KEsicX37_yg/YACqYchvAVI/AAAAAAAAKIw/zqADtL-gn2YRucHSlxObisPlIveBmVlpgCLcBGAsYHQ/s675/recent_games.jpg')">
-        <p class="btitle">Recent Games</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/03/bug-hunt-3.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-4eTi_96B1Hk/YACqJnGsTNI/AAAAAAAAKG8/2BM-iWuAzGMxXEcwbc9aURFNgF_WWHMNgCLcBGAsYHQ/s675/bh3.jpg')">
-        <p class="btitle">Bug Hunt III</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/03/bug-hunt-2.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-fOA47opsj2E/YACqJCEcieI/AAAAAAAAKG4/aMdUJwtJ9u8IF-gXuAYz7_OGrVwiixf0wCLcBGAsYHQ/s675/bh2.jpg')">
-        <p class="btitle">Bug Hunt II</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/01/mirror-matchups.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-VsnRXYoSN98/YACqVbCqdqI/AAAAAAAAKIY/gnT-HTiK1rIDoUUPOU9FITagXuCa9xmyQCLcBGAsYHQ/s675/mirror_matchups.jpg')">
-        <p class="btitle">Mirror matchups<br>
-          Asymmetry analysis</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/01/memes-extension-mod.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-H-k_bV2R2xo/YACqU19OX8I/AAAAAAAAKIU/bgkAaZ1SryAm3uKJMA_KKox7aYQUDt9FACLcBGAsYHQ/s675/memes.jpg')">
-        <p class="btitle">Memes<br>
-          Extension mod</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/01/feedback-loops-in-starcraft.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-RDvEYIVFpHY/YACqQO4F1uI/AAAAAAAAKHw/Aytgbj9kmL07eKsvL7IDNyIDYq7aa6STgCLcBGAsYHQ/s675/feedback_loops_in_starcraft.jpg')">
-        <p class="btitle">Feedback loops<br>
-          in StarCraft</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2019/01/bug-hunt.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-UDvEghiXLU8/YACqIKmyL3I/AAAAAAAAKGw/Zq8Yfq7wlCsbQIIfISIYKTpKNoRYydsbACLcBGAsYHQ/s675/bh1.jpg')">
-        <p class="btitle">Bug Hunt</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2018/12/skill-curves-flow.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-Kc40IgoUGD0/YACqb3R8ECI/AAAAAAAAKJM/uZHf5piQ5-sZC-zYqnwMa6qNr3w8MgT-QCLcBGAsYHQ/s675/skill_curves.jpg')">
-        <p class="btitle">Skill Curves<br>
-          &amp; Flow</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/p/karax.html">
-      <div style="background-image: url('https://1.bp.blogspot.com/-UAUaFXXoGeA/YACqT81LQ8I/AAAAAAAAKIM/4mkMnUB-1ngB-XIywxU7JOyOw6OW3t73QCLcBGAsYHQ/s675/karax2.jpg')">
-        <p class="btitle">Karax 2.0</p>
-      </div>
-    </a> <a class="itemlink" href="">
-      <div style="background-image: url('https://1.bp.blogspot.com/-t1UN_cvAIdI/YACqfx2f5eI/AAAAAAAAKKI/knwSZVtv3NYbI1G3hG02IC8FyAEMZhRTACLcBGAsYHQ/s675/web_app.jpg')">
-        <p class="btitle">Web App</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/p/my-maps.html">
-      <div style="background-image: url('https://1.bp.blogspot.com/-w3B0aTQoDck/YACxX69xuAI/AAAAAAAAKK4/ucoyzBV_xgMB6ljbPWYy_x4P26yd1wJ4gCLcBGAsYHQ/s675/my_maps.jpg')">
-        <p class="btitle">My maps</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2018/11/leaderboards.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-qbbA-Ds5qv4/YACxYB0MZhI/AAAAAAAAKLA/_yP5zRP1AzEE7dP6yfHl7RGMyhZi9xxiQCLcBGAsYHQ/s675/leaderboards.jpg')">
-        <p class="btitle">Leaderboards</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2018/11/achievements.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-Sowea1H3Rrg/YACqGL8f6-I/AAAAAAAAKGg/mg2UzBRXEyg67RY6OT_gpXH4w090xWmYwCLcBGAsYHQ/s675/achievements.jpg')">
-        <p class="btitle">Achievements</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2018/08/wheel-of-misfortune.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-R1TIzfYxqpw/YACqgH1iSKI/AAAAAAAAKKM/ffPoB2LGA3we8Legf-jCSPxrBjaY98LDACLcBGAsYHQ/s675/wheel_of_misfortune.jpg')">
-        <p class="btitle">Wheel of Misfortune</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2018/08/pushing-forward-rewards.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-qgtD3xT5eV0/YACqXy1hRFI/AAAAAAAAKIs/8zBY7oRxjlY2Ol14T0KX2oky4-8x8pEOwCLcBGAsYHQ/s675/pushing_forward_and_rewards.jpg')">
-        <p class="btitle">Pushing forward<br>
-          &amp; Rewards</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2018/06/in-defense-of-defense.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-h74lYxS8eCs/YACxXxhroGI/AAAAAAAAKK8/zEc1UwaPLD8Fc-ms002FqV105Z8eYO9ygCLcBGAsYHQ/s675/defense.jpg')">
-        <p class="btitle">In Defense of Defense</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2018/04/gameplay-variety-and-modularity.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-Iw4MYUGF0bE/YACqRWg8ErI/AAAAAAAAKH4/zldGHJTGT5MQufwsr6E8Bz6gL-uoBF4QQCLcBGAsYHQ/s675/gameplay_variey_and_modularity.jpg')">
-        <p class="btitle">Gameplay Variety<br>
-          and Modularity</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2018/03/dehaka.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-GvS6V6Bc4VQ/YACqPGP6HlI/AAAAAAAAKHo/nh--bY8fC9ILkf-a-1xGbeTaPud5vwGWgCLcBGAsYHQ/s675/dehaka.jpg')">
-        <p class="btitle">Dehaka</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2018/01/progression-and-strategies.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-Y0eZ8fVGkwI/YACqXZEmU2I/AAAAAAAAKIo/Ygdl1b6F8MwOdr6paNkpu9Cwyjn8LJlxgCLcBGAsYHQ/s675/progression_and_strategies.jpg')">
-        <p class="btitle">Progression<br>
-          and Strategies</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2017/12/mutator-compendium.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-cUecZYwtcq8/YACqWchAuVI/AAAAAAAAKIg/gd4PPqz0mJYCrm1Qs_xFVe2USrI65xA9QCLcBGAsYHQ/s675/mutator_compendium.jpg')">
-        <p class="btitle">Mutator Compendium</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2017/12/mutations.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-4avUiIi_E5o/YACqV3xDTMI/AAAAAAAAKIc/iQTBfPA0Idk9VIvddW7uV4wmMgnZW_jFQCLcBGAsYHQ/s675/mutations.jpg')">
-        <p class="btitle">Mutations</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2017/12/co-op-channels.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-70IqzKRHvDo/YACqOTFx_eI/AAAAAAAAKHg/0Fr-9iol9lcjTY4JqitWQsodUr09AopZQCLcBGAsYHQ/s675/coop_channels.jpg')">
-        <p class="btitle">Co-op channels</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2017/11/the-popularity-of-nova-terra.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-1HpzasYh54I/YACqdtKrxrI/AAAAAAAAKJc/aHiQFvcDSUsoeKFLPTs4i68SQYcRkdFhQCLcBGAsYHQ/s675/the_popularity_of_nova_terra.jpg')">
-        <p class="btitle">The popularity of Nova Terra</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2017/11/some-thoughts-and-speculations-on-h.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-3k2OCAYUKtQ/YACqcVwZIxI/AAAAAAAAKJQ/hUz_DeW4Ilsy6waegFt6oj2Y-AVSigafACLcBGAsYHQ/s675/some_thoughts_and_speculations_on_hnh.jpg')">
-        <p class="btitle">Some thoughts and <br>
-          speculations on H&amp;H</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2017/11/re-patch-40.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-OZaW81bLUV0/YACqW41yRII/AAAAAAAAKIk/CV9Kx8E_XNAr00ZaGLcg8E00qVLryw2uwCLcBGAsYHQ/s675/patch_4.jpg')">
-        <p class="btitle">Ref: StarCraft II<br>
-          Patch 4.0</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2017/10/upgrades-in-co-op.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-o7rl_CkLDcg/YACqfBxoX7I/AAAAAAAAKJ4/ewEIPLRgKbUsZVnlrQ8ZjNhD1DKNbo6PwCLcBGAsYHQ/s675/upgrades_in_coop.jpg')">
-        <p class="btitle">Upgrades in Co-op</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2017/10/the-united-earth-directorate.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-hur9XJ80IkA/YACqePhiN4I/AAAAAAAAKJs/CkcSWb5-CXcz91zQpKjDr3ShhZoMh9_bQCLcBGAsYHQ/s675/ued.jpg')">
-        <p class="btitle">United Earth Directorate<br>
-          commander concept</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2017/10/aspects-of-co-op-commanders.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-Y_OEsFfSBHE/YACqGt1LlHI/AAAAAAAAKGk/q03ZngLMhh0k-qSqPG3EEvXNwxgKEs8RwCLcBGAsYHQ/s675/aspects_of_coop_commanders.jpg')">
-        <p class="btitle">Aspects of<br>
-          Co-op commanders</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2017/08/void-rifts.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-4a7aD_4Sj0Y/YACqfhLHjHI/AAAAAAAAKKE/9rRZcESpK9sOMAEOZzF6Is_5MkHu3dKywCLcBGAsYHQ/s675/void_rifts.jpg')">
-        <p class="btitle">Void Rifts</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2017/08/the-future-of-co-op.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-knXW_iibu48/YACqde4M-TI/AAAAAAAAKJY/K5ViRO7-hSwWtIwthtnhaETnNXpXBXUVACLcBGAsYHQ/s675/the_future_of_coop.jpg')">
-        <p class="btitle">The Future of Co-op</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2017/08/rise-of-fenix.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-goVVy8vFzvE/YACqaQJyB_I/AAAAAAAAKJA/A96u8AkyonwWxGnaAP0xhr1T0RkvZztJQCLcBGAsYHQ/s675/rise_of_fenix.jpg')">
-        <p class="btitle">Rise of Fenix</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2017/08/improving-blizzard-mutator.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-HoYTJ-C_nd8/YACqTdSc7CI/AAAAAAAAKII/gdzLfu56WQAuwYgFVJYLi3bZlGtp9t5kQCLcBGAsYHQ/s675/improving_blizzard_mutator.jpg')">
-        <p class="btitle">Improving Blizzard mutator</p>
-      </div>
-    </a> <a class="itemlink" href="https://www.maguro.one/2017/08/fatal-attraction-and-propagators.html">
-      <p class="postdate"></p>
-      <div style="background-image: url('https://1.bp.blogspot.com/-TkyoWBfbSYo/YACqP8h1CYI/AAAAAAAAKHs/CIGFxbL2K58e8us3Uv1NlwVMUrKzvPJ6ACLcBGAsYHQ/s675/fatal_attraction_and_propagators.jpg')">
-        <p class="btitle">Fatal Attraction<br>
-          and Propagators</p>
-      </div>
-    </a>
-  </body>
+  </style>
+</head>
+
+<body>
+  <div id="fallbackdiv"></div>
+  <a class="itemlink" href="https://www.maguro.one/2021/12/aoe4.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-7YyarqzpnHw/YakePgt9ZkI/AAAAAAAAK9w/yn9CaDG5Hb8dE1PDYZrg5s10szOcBPCxQCNcBGAsYHQ/s1200/banner.jpg')">
+      <p class="btitle">Age of Empires IV<br>
+    </div>
+  </a>
+  <a class="itemlink" href="https://www.maguro.one/2021/11/mixed-strategies.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-anrfANeYZrw/YZ2MZ_i2MwI/AAAAAAAAK6w/gcEKB-GeGyUC7aPW3Mx_LyEIc4x7icXqACLcBGAsYHQ/s1200/banner.jpg')">
+      <p class="btitle">Mixed strategies<br>
+    </div>
+  </a>
+  <a class="itemlink" href="https://www.maguro.one/2021/10/TR11-co-op.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-k9cCqWwtoTE/YW1zDQ10YtI/AAAAAAAAK20/-ZoGt0fHgRIqPkIcrVOxWFZWrWajS5clgCLcBGAsYHQ/s1200/banner.jpg')">
+      <p class="btitle">Transmission 11<br>
+        <span class="bsuptitle">A plan for co-op</span>
+      </p>
+    </div>
+  </a>
+  <a class="itemlink" href="https://www.maguro.one/2021/09/TR10-social-features.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-4vAd5FK56s0/YT9W5xjrgjI/AAAAAAAAK0M/0tIXe-npKKAp-n1f6DrW5fW1cxIW7CojwCLcBGAsYHQ/s1200/Banner%2B-%2BSocial.jpg')">
+      <p class="btitle">Transmission 10<br>
+        <span class="bsuptitle">Social features</span>
+      </p>
+    </div>
+  </a>
+  <a class="itemlink" href="https://www.maguro.one/2021/08/faction-image-design.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-vDD__lXVULM/YR0_zd3k9kI/AAAAAAAAKxo/UMzNPtpNKT8vkJQJeGO7oGDSa29UHcATwCLcBGAsYHQ/s1200/Banner.jpg')">
+      <p class="btitle">Faction image &amp; design<br>
+        <span class="bsuptitle"></span>
+      </p>
+    </div>
+  </a>
+  <a class="itemlink" href="https://www.maguro.one/2021/06/inhumane.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/--2QISC530NI/YM4fO-YcpsI/AAAAAAAAKo4/4rdK08NCmms7f_UDUkveuh-SH4zuuo_GACLcBGAsYHQ/s1200/banner.jpg')">
+      <p class="btitle">New custom mutator<br>
+        <span class="bsuptitle">Inhumane</span>
+      </p>
+    </div>
+  </a>
+  <a class="itemlink" href="https://www.maguro.one/2021/06/TR09-gameplay-variety.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-sF7hJOeZH1E/YJGpcZ2sssI/AAAAAAAAKiU/8nU4_c05Hfk5v-FUgKEEJp9oJmyTJaBEwCLcBGAsYHQ/s1200/banner2.jpg')">
+      <p class="btitle">Transmission 09<br>
+        <span class="bsuptitle">Gameplay variety</span>
+      </p>
+    </div>
+  </a>
+  <a class="itemlink" href="https://www.maguro.one/2021/05/TR08-attention-and-macro.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-mMWhGWiEkHk/YJB1yrAulHI/AAAAAAAAKho/VD7u_KSyxkksXKZuXgHFnR8pS9Q9y6RagCLcBGAsYHQ/s1200/banner.jpg')">
+      <p class="btitle">Transmission 08<br>
+        <span class="bsuptitle">Attention and macro</span>
+      </p>
+    </div>
+  </a>
+  <a class="itemlink" href="https://www.maguro.one/2021/04/TR07-teamgames.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-xc_T8yHHoT0/YHWFO6bSHfI/AAAAAAAAKec/5B5JjRVH578029QsZ_-wAcxNemNP9mR4ACLcBGAsYHQ/s1200/Banner.jpg')">
+      <p class="btitle">Transmission 07<br>
+        <span class="bsuptitle">Team games in RTS</span>
+      </p>
+    </div>
+  </a>
+  <a class="itemlink" href="https://www.maguro.one/2021/03/transmission06.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-MZMjBFT6500/YACqFFYc7SI/AAAAAAAAKGY/MPlgB0FTsfABVF7-oD373P9Vv-dpyDlAACLcBGAsYHQ/s675/FG.jpg')">
+      <p class="btitle">Transmission 06<br>
+        <span class="bsuptitle">API, replays, post-game screens</span>
+      </p>
+    </div>
+  </a>
+  <a class="itemlink" href="https://www.maguro.one/2021/03/transmission-05.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-MZMjBFT6500/YACqFFYc7SI/AAAAAAAAKGY/MPlgB0FTsfABVF7-oD373P9Vv-dpyDlAACLcBGAsYHQ/s675/FG.jpg')">
+      <p class="btitle">Transmission 05<br>
+        <span class="bsuptitle">Events &amp; progression</span>
+      </p>
+    </div>
+  </a>
+  <a class="itemlink" href="https://www.maguro.one/2021/02/transmission04.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-MZMjBFT6500/YACqFFYc7SI/AAAAAAAAKGY/MPlgB0FTsfABVF7-oD373P9Vv-dpyDlAACLcBGAsYHQ/s675/FG.jpg')">
+      <p class="btitle">Transmission 04<br>
+        <span class="bsuptitle">Improving Co-op</span>
+      </p>
+    </div>
+  </a>
+  <a class="itemlink" href="https://www.maguro.one/2020/12/transmission03.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-MZMjBFT6500/YACqFFYc7SI/AAAAAAAAKGY/MPlgB0FTsfABVF7-oD373P9Vv-dpyDlAACLcBGAsYHQ/s675/FG.jpg')">
+      <p class="btitle">Transmission 03<br>
+        <span class="bsuptitle">Divided playerbase, variety mode, victory
+          conditions</span>
+      </p>
+    </div>
+  </a><a class="itemlink" href="https://www.maguro.one/2021/01/supply-limits.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-cJyyVgqaips/YArm53aVc1I/AAAAAAAAKMg/JadMRk9CP143gjowEJ9WpO1ChxPgyB-4wCLcBGAsYHQ/s0/banner.jpg')">
+      <p class="btitle">Supply &amp; Limits</p>
+    </div>
+  </a><a class="itemlink" href="https://www.maguro.one/2021/01/cnc3.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-zZyt0nlZnLw/YAdMjNK1o_I/AAAAAAAAKL4/IpvQCXPSZZwEID2xvqzsJPw9R6tCJN2UgCLcBGAsYHQ/s675/cnc3.jpg')">
+      <p class="btitle">Command and Conquer 3</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2020/12/mastery-exploit.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-hiJ214wxKBY/YACvtFPB9RI/AAAAAAAAKKw/O8cfGKJcTA4aIaQvdXhFFwEZWWxlw5tzACLcBGAsYHQ/s675/mastery_explot.jpg')">
+      <p class="btitle">Mastery Exploit</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2020/11/transmission02.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-MZMjBFT6500/YACqFFYc7SI/AAAAAAAAKGY/MPlgB0FTsfABVF7-oD373P9Vv-dpyDlAACLcBGAsYHQ/s675/FG.jpg')">
+      <p class="btitle">Transmission 02<br>
+        <span class="bsuptitle">Player onboarding</span>
+      </p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2020/11/transmission01.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-MZMjBFT6500/YACqFFYc7SI/AAAAAAAAKGY/MPlgB0FTsfABVF7-oD373P9Vv-dpyDlAACLcBGAsYHQ/s675/FG.jpg')">
+      <p class="btitle">Transmission 01<br>
+        <span class="bsuptitle">Setting, Scale, Socialization</span>
+      </p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2020/10/unit-design.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-i5BncaDNdUI/YACqeEM-P2I/AAAAAAAAKJ0/n96HGd7us40n9hk5ic8e-42g7AxEmFGKACLcBGAsYHQ/s675/unit_design.jpg')">
+      <p class="btitle">Look at Unit Design</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2020/10/closer-look-at-upkeep.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-G_87o9yOiN0/YACqfWhGmMI/AAAAAAAAKJ8/9myG6OuwbSIM_vRPq8tx4wjul1NzEKNLgCLcBGAsYHQ/s675/upkeep.jpg')">
+      <p class="btitle">Upkeep</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2020/04/hsc-in-numbers.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-6-Osb9fBybA/YACqSewPcoI/AAAAAAAAKIA/_6LuXkz0_zUtYxgJOcdqAiJLTdRKbVZ-ACLcBGAsYHQ/s675/hsc_in_numbers.jpg')">
+      <p class="btitle">HSC in numbers</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2020/04/bug-hunt-10.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-81pDiIvV1a4/YACqIpZF-6I/AAAAAAAAKG0/Gb4YqYsqWoozMeTl4POyLnbuOAhKbSImwCLcBGAsYHQ/s675/bh10.jpg')">
+      <p class="btitle">Bug Hunt X</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2020/03/iem-in-numbers.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-46T1t01H68c/YACqS_7JYmI/AAAAAAAAKIE/0oUth8WKrDcPaOAZGfdR3kYJFaGtFs2QgCLcBGAsYHQ/s675/iem_in_numbers.jpg')">
+      <p class="btitle">IEM in numbers</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2020/02/tournament-analysis.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-2z-qjpg2J5A/YACqd9DsFgI/AAAAAAAAKJk/NOS0oC4Iw6YcJJ69cH-2FFJ-EyIstMcYQCLcBGAsYHQ/s675/tournament_analysis.jpg')">
+      <p class="btitle">Tournament Analysis</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2020/01/survival-mode.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-jRcNX2_Sby4/YACqc_MdxyI/AAAAAAAAKJU/R_0nYibsHbQkK8y1y9HgjOr2qZNhx2IEACLcBGAsYHQ/s675/survival_mode.jpg')">
+      <p class="btitle">Survival Mode</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2020/01/replay-analysis-2.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-anitN4kA_Q4/YACqZXPoYoI/AAAAAAAAKI4/_GPuVfPyBhw12kLvDCqt7R4paHkasoVrgCLcBGAsYHQ/s675/replay_analysis2.jpg.jpg')">
+      <p class="btitle">Replay Analysis II</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2020/01/fluffy-chatbot.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-v8xynJntToU/YACqQwdkuEI/AAAAAAAAKH0/OP-FA8hQl_YSAVE7RYJ9ICZ95VzKrre4gCLcBGAsYHQ/s675/fluffy_chatbot.jpg')">
+      <p class="btitle">Fluffy Chat Bot</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/12/healer-ai.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-Av8cce77ITo/YACqR5FrpWI/AAAAAAAAKH8/GIGQlI5cL5kPcBntTmnbH-6SbDDpnqpWgCLcBGAsYHQ/s675/healer_ai.jpg')">
+      <p class="btitle">Healer AI</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/12/brutal-plus-revisited.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-cFD3dSXkPGk/YACqHv48ibI/AAAAAAAAKGs/WdyiAG7OpLUqk2cl9FMT5o0Z9IG7LRSLgCLcBGAsYHQ/s675/b_plus_revisited.jpg')">
+      <p class="btitle">Brutal+ Revisited</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/12/brutal-analysis.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-wNNIJMOroFI/YACqHIGgXRI/AAAAAAAAKGo/PHNH9svf4FMAzpnOEAATV-KAc8bG3GGRwCLcBGAsYHQ/s675/b_plus_analysis.jpg')">
+      <p class="btitle">Brutal+ Analysis</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/11/replay-analysis.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-UCGtMjACHPU/YACqY4CHSSI/AAAAAAAAKI0/DvGjEpuiiTMiztPaAO0sHo0jXh4vGawiACLcBGAsYHQ/s675/replay_analysis.jpg')">
+      <p class="btitle">Replay Analysis<br>
+        with Python</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/11/bug-hunt-9.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-Z7Zs9xLue94/YACqMgKc2cI/AAAAAAAAKHU/lzYJ9q6p_NQ0IS7-p9CgdsGdEKB0TjcrwCLcBGAsYHQ/s675/bh9.jpg')">
+      <p class="btitle">Bug Hunt IX</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/10/shapeshifters.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-0zGAJ4pS7iw/YACqFiOLvQI/AAAAAAAAKGc/lDYtS4cgcMgBBwDJBX21jTSpXkH1VXeMACLcBGAsYHQ/s675/Shapeshifters.jpg')">
+      <p class="btitle">Shapeshifters</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/10/replay-interface.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-D7tmO3uhE8A/YACqZ7WUIpI/AAAAAAAAKI8/dt2WHO-3o18nsD-FdpeqzMaRxMHrjejzACLcBGAsYHQ/s675/replay_interface.jpg')">
+      <p class="btitle">Replay interface</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/10/gears-5.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-J7IUbXpXOiM/YACqFM4-1-I/AAAAAAAAKGQ/HhhkJwpRzW8oVf3N4yud1nbUWXCxlPzgQCLcBGAsYHQ/s675/Gears5.jpg')">
+      <p class="btitle">Gears 5</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/10/dram-performance-testing-in-starcraft-2.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-MDJgTz6iDu0/YACqFLCKMjI/AAAAAAAAKGU/ELlfCmtGIyATzyfhiQ14by_PXHk0j5KowCLcBGAsYHQ/s675/DRAM.jpg')">
+      <p class="btitle">DRAM performance<br>
+        testing in StarCraft II</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/10/bug-hunt-8.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-uou0z-QVS50/YACqMfx9jjI/AAAAAAAAKHQ/sNfmh8KQYcQTCHrMX7d8VnEJPOanaO-ugCLcBGAsYHQ/s675/bh8.jpg')">
+      <p class="btitle">Bug Hunt VIII</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/09/the-usual-suspects.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-goVVy8vFzvE/YACqaQJyB_I/AAAAAAAAKJA/A96u8AkyonwWxGnaAP0xhr1T0RkvZztJQCLcBGAsYHQ/s675/rise_of_fenix.jpg')">
+      <p class="btitle">The Usual Suspects</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/09/performance-testing.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-UzCz6OjVyS4/YACqbTS-2SI/AAAAAAAAKJI/kbwkq6wS31IRNPXBwtZrX4RZJbvd1Gu0gCLcBGAsYHQ/s675/sc2_benchmarking.jpg')">
+      <p class="btitle">StarCraft II<br>
+        performance testing</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/09/bug-hunt-7.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-Qg0_zM9rN_U/YACqL8ac_rI/AAAAAAAAKHM/S_vYM63efF8xC9Rg9nf4CyIAFcQZTsYfACLcBGAsYHQ/s675/bh7.jpg')">
+      <p class="btitle">Bug Hunt VII</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/06/uiux-tweaks.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-xGvvo04pYaE/YACqeIoQrcI/AAAAAAAAKJw/ANLR0mB2czk8DN75YuCQ29WKHdQJocsDACLcBGAsYHQ/s675/uiux_tweaks.jpg')">
+      <p class="btitle">UI/UX Tweaks</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/06/mutator-safety-zones.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-8pl3IhZnc0E/YACqa3l3xBI/AAAAAAAAKJE/ftuBm_3hQQcI3An-JgYT7oFbKp5_uNSngCLcBGAsYHQ/s675/safety_zones.jpg')">
+      <p class="btitle">Mutator Safety Zones</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/06/bug-hunt-6.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-dp8Qts95gY4/YACqLMaNOZI/AAAAAAAAKHI/tCpEK4EZwZQh_edKBGubRpu3pErU7FK7wCLcBGAsYHQ/s675/bh6.jpg')">
+      <p class="btitle">Bug Hunt VI</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/06/bug-hunt-5.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-wCRW1ZRrIpc/YACqKiywRRI/AAAAAAAAKHE/O2KP6W1pHcgzwaWolHRSwLY14fhKk6UgQCLcBGAsYHQ/s675/bh5.jpg')">
+      <p class="btitle">Bug Hunt V</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/04/challenge-mode.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-vs6tyI9bdY4/YACqNPvaQlI/AAAAAAAAKHY/SPYxRBbTrsQV00GwoZ92o2JbxhjzIDUCACLcBGAsYHQ/s675/challenge_mode.jpg')">
+      <p class="btitle">Challenge mode</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/04/bug-hunt-4.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-DZh_Yzm--bA/YACqKDQUG-I/AAAAAAAAKHA/VWvaEGVjNtgFprRWdq165N0pA6X9uPAxwCLcBGAsYHQ/s675/bh4.jpg')">
+      <p class="btitle">Bug Hunt IV</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/03/recent-games.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-KEsicX37_yg/YACqYchvAVI/AAAAAAAAKIw/zqADtL-gn2YRucHSlxObisPlIveBmVlpgCLcBGAsYHQ/s675/recent_games.jpg')">
+      <p class="btitle">Recent Games</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/03/bug-hunt-3.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-4eTi_96B1Hk/YACqJnGsTNI/AAAAAAAAKG8/2BM-iWuAzGMxXEcwbc9aURFNgF_WWHMNgCLcBGAsYHQ/s675/bh3.jpg')">
+      <p class="btitle">Bug Hunt III</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/03/bug-hunt-2.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-fOA47opsj2E/YACqJCEcieI/AAAAAAAAKG4/aMdUJwtJ9u8IF-gXuAYz7_OGrVwiixf0wCLcBGAsYHQ/s675/bh2.jpg')">
+      <p class="btitle">Bug Hunt II</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/01/mirror-matchups.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-VsnRXYoSN98/YACqVbCqdqI/AAAAAAAAKIY/gnT-HTiK1rIDoUUPOU9FITagXuCa9xmyQCLcBGAsYHQ/s675/mirror_matchups.jpg')">
+      <p class="btitle">Mirror matchups<br>
+        Asymmetry analysis</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/01/memes-extension-mod.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-H-k_bV2R2xo/YACqU19OX8I/AAAAAAAAKIU/bgkAaZ1SryAm3uKJMA_KKox7aYQUDt9FACLcBGAsYHQ/s675/memes.jpg')">
+      <p class="btitle">Memes<br>
+        Extension mod</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/01/feedback-loops-in-starcraft.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-RDvEYIVFpHY/YACqQO4F1uI/AAAAAAAAKHw/Aytgbj9kmL07eKsvL7IDNyIDYq7aa6STgCLcBGAsYHQ/s675/feedback_loops_in_starcraft.jpg')">
+      <p class="btitle">Feedback loops<br>
+        in StarCraft</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2019/01/bug-hunt.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-UDvEghiXLU8/YACqIKmyL3I/AAAAAAAAKGw/Zq8Yfq7wlCsbQIIfISIYKTpKNoRYydsbACLcBGAsYHQ/s675/bh1.jpg')">
+      <p class="btitle">Bug Hunt</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2018/12/skill-curves-flow.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-Kc40IgoUGD0/YACqb3R8ECI/AAAAAAAAKJM/uZHf5piQ5-sZC-zYqnwMa6qNr3w8MgT-QCLcBGAsYHQ/s675/skill_curves.jpg')">
+      <p class="btitle">Skill Curves<br>
+        &amp; Flow</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/p/karax.html">
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-UAUaFXXoGeA/YACqT81LQ8I/AAAAAAAAKIM/4mkMnUB-1ngB-XIywxU7JOyOw6OW3t73QCLcBGAsYHQ/s675/karax2.jpg')">
+      <p class="btitle">Karax 2.0</p>
+    </div>
+  </a> <a class="itemlink" href="">
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-t1UN_cvAIdI/YACqfx2f5eI/AAAAAAAAKKI/knwSZVtv3NYbI1G3hG02IC8FyAEMZhRTACLcBGAsYHQ/s675/web_app.jpg')">
+      <p class="btitle">Web App</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/p/my-maps.html">
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-w3B0aTQoDck/YACxX69xuAI/AAAAAAAAKK4/ucoyzBV_xgMB6ljbPWYy_x4P26yd1wJ4gCLcBGAsYHQ/s675/my_maps.jpg')">
+      <p class="btitle">My maps</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2018/11/leaderboards.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-qbbA-Ds5qv4/YACxYB0MZhI/AAAAAAAAKLA/_yP5zRP1AzEE7dP6yfHl7RGMyhZi9xxiQCLcBGAsYHQ/s675/leaderboards.jpg')">
+      <p class="btitle">Leaderboards</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2018/11/achievements.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-Sowea1H3Rrg/YACqGL8f6-I/AAAAAAAAKGg/mg2UzBRXEyg67RY6OT_gpXH4w090xWmYwCLcBGAsYHQ/s675/achievements.jpg')">
+      <p class="btitle">Achievements</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2018/08/wheel-of-misfortune.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-R1TIzfYxqpw/YACqgH1iSKI/AAAAAAAAKKM/ffPoB2LGA3we8Legf-jCSPxrBjaY98LDACLcBGAsYHQ/s675/wheel_of_misfortune.jpg')">
+      <p class="btitle">Wheel of Misfortune</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2018/08/pushing-forward-rewards.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-qgtD3xT5eV0/YACqXy1hRFI/AAAAAAAAKIs/8zBY7oRxjlY2Ol14T0KX2oky4-8x8pEOwCLcBGAsYHQ/s675/pushing_forward_and_rewards.jpg')">
+      <p class="btitle">Pushing forward<br>
+        &amp; Rewards</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2018/06/in-defense-of-defense.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-h74lYxS8eCs/YACxXxhroGI/AAAAAAAAKK8/zEc1UwaPLD8Fc-ms002FqV105Z8eYO9ygCLcBGAsYHQ/s675/defense.jpg')">
+      <p class="btitle">In Defense of Defense</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2018/04/gameplay-variety-and-modularity.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-Iw4MYUGF0bE/YACqRWg8ErI/AAAAAAAAKH4/zldGHJTGT5MQufwsr6E8Bz6gL-uoBF4QQCLcBGAsYHQ/s675/gameplay_variey_and_modularity.jpg')">
+      <p class="btitle">Gameplay Variety<br>
+        and Modularity</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2018/03/dehaka.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-GvS6V6Bc4VQ/YACqPGP6HlI/AAAAAAAAKHo/nh--bY8fC9ILkf-a-1xGbeTaPud5vwGWgCLcBGAsYHQ/s675/dehaka.jpg')">
+      <p class="btitle">Dehaka</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2018/01/progression-and-strategies.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-Y0eZ8fVGkwI/YACqXZEmU2I/AAAAAAAAKIo/Ygdl1b6F8MwOdr6paNkpu9Cwyjn8LJlxgCLcBGAsYHQ/s675/progression_and_strategies.jpg')">
+      <p class="btitle">Progression<br>
+        and Strategies</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2017/12/mutator-compendium.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-cUecZYwtcq8/YACqWchAuVI/AAAAAAAAKIg/gd4PPqz0mJYCrm1Qs_xFVe2USrI65xA9QCLcBGAsYHQ/s675/mutator_compendium.jpg')">
+      <p class="btitle">Mutator Compendium</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2017/12/mutations.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-4avUiIi_E5o/YACqV3xDTMI/AAAAAAAAKIc/iQTBfPA0Idk9VIvddW7uV4wmMgnZW_jFQCLcBGAsYHQ/s675/mutations.jpg')">
+      <p class="btitle">Mutations</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2017/12/co-op-channels.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-70IqzKRHvDo/YACqOTFx_eI/AAAAAAAAKHg/0Fr-9iol9lcjTY4JqitWQsodUr09AopZQCLcBGAsYHQ/s675/coop_channels.jpg')">
+      <p class="btitle">Co-op channels</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2017/11/the-popularity-of-nova-terra.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-1HpzasYh54I/YACqdtKrxrI/AAAAAAAAKJc/aHiQFvcDSUsoeKFLPTs4i68SQYcRkdFhQCLcBGAsYHQ/s675/the_popularity_of_nova_terra.jpg')">
+      <p class="btitle">The popularity of Nova Terra</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2017/11/some-thoughts-and-speculations-on-h.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-3k2OCAYUKtQ/YACqcVwZIxI/AAAAAAAAKJQ/hUz_DeW4Ilsy6waegFt6oj2Y-AVSigafACLcBGAsYHQ/s675/some_thoughts_and_speculations_on_hnh.jpg')">
+      <p class="btitle">Some thoughts and <br>
+        speculations on H&amp;H</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2017/11/re-patch-40.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-OZaW81bLUV0/YACqW41yRII/AAAAAAAAKIk/CV9Kx8E_XNAr00ZaGLcg8E00qVLryw2uwCLcBGAsYHQ/s675/patch_4.jpg')">
+      <p class="btitle">Ref: StarCraft II<br>
+        Patch 4.0</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2017/10/upgrades-in-co-op.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-o7rl_CkLDcg/YACqfBxoX7I/AAAAAAAAKJ4/ewEIPLRgKbUsZVnlrQ8ZjNhD1DKNbo6PwCLcBGAsYHQ/s675/upgrades_in_coop.jpg')">
+      <p class="btitle">Upgrades in Co-op</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2017/10/the-united-earth-directorate.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-hur9XJ80IkA/YACqePhiN4I/AAAAAAAAKJs/CkcSWb5-CXcz91zQpKjDr3ShhZoMh9_bQCLcBGAsYHQ/s675/ued.jpg')">
+      <p class="btitle">United Earth Directorate<br>
+        commander concept</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2017/10/aspects-of-co-op-commanders.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-Y_OEsFfSBHE/YACqGt1LlHI/AAAAAAAAKGk/q03ZngLMhh0k-qSqPG3EEvXNwxgKEs8RwCLcBGAsYHQ/s675/aspects_of_coop_commanders.jpg')">
+      <p class="btitle">Aspects of<br>
+        Co-op commanders</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2017/08/void-rifts.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-4a7aD_4Sj0Y/YACqfhLHjHI/AAAAAAAAKKE/9rRZcESpK9sOMAEOZzF6Is_5MkHu3dKywCLcBGAsYHQ/s675/void_rifts.jpg')">
+      <p class="btitle">Void Rifts</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2017/08/the-future-of-co-op.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-knXW_iibu48/YACqde4M-TI/AAAAAAAAKJY/K5ViRO7-hSwWtIwthtnhaETnNXpXBXUVACLcBGAsYHQ/s675/the_future_of_coop.jpg')">
+      <p class="btitle">The Future of Co-op</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2017/08/rise-of-fenix.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-goVVy8vFzvE/YACqaQJyB_I/AAAAAAAAKJA/A96u8AkyonwWxGnaAP0xhr1T0RkvZztJQCLcBGAsYHQ/s675/rise_of_fenix.jpg')">
+      <p class="btitle">Rise of Fenix</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2017/08/improving-blizzard-mutator.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-HoYTJ-C_nd8/YACqTdSc7CI/AAAAAAAAKII/gdzLfu56WQAuwYgFVJYLi3bZlGtp9t5kQCLcBGAsYHQ/s675/improving_blizzard_mutator.jpg')">
+      <p class="btitle">Improving Blizzard mutator</p>
+    </div>
+  </a> <a class="itemlink" href="https://www.maguro.one/2017/08/fatal-attraction-and-propagators.html">
+    <p class="postdate"></p>
+    <div
+      style="background-image: url('https://1.bp.blogspot.com/-TkyoWBfbSYo/YACqP8h1CYI/AAAAAAAAKHs/CIGFxbL2K58e8us3Uv1NlwVMUrKzvPJ6ACLcBGAsYHQ/s675/fatal_attraction_and_propagators.jpg')">
+      <p class="btitle">Fatal Attraction<br>
+        and Propagators</p>
+    </div>
+  </a>
+</body>
+
 </html>
